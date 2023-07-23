@@ -10,8 +10,6 @@ const data=[
   "Web Design",
   "Development",
   "MachineLearning",
-  "Illustration",
-  "Social Media",
 ]; 
 
 const Section = styled.div`
@@ -62,7 +60,7 @@ const ListItem = styled.li`
     font-size: 24px;
     color: white;
     -webkit-text-stroke: 0px ;
-
+    list-style: disc;
   }
   
   ::after{
@@ -94,7 +92,7 @@ const Right   = styled.div`
 `;
 
 const Works= () => {
-  const [work,setWork]=useState( "Web Design");
+  const [work,setWork]=useState("");
   return (
     <Section>
       <Container>
@@ -108,13 +106,13 @@ const Works= () => {
           </List>
         </Left>
         <Right>
-          {work=="Web Design" ? (
+          {/* {work=="Web Design" ? (
             <WebDesign />
           ) : work== "Development" ? (
             <Development/>
           ) : (
             <ProductDesign/>
-          )}
+          )} */}
         </Right>
       </Container>
       </Section>

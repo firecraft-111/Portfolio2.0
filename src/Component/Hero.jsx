@@ -135,9 +135,9 @@ const Hero= () => {
             <Title>Think. Make.  Solve.</Title>
             <WhatWeDO>
              <Line src="./img/line.png"/>
-             <Subtitle>WhatWeDo</Subtitle>
+             <Subtitle>What I Do</Subtitle>
           </WhatWeDO>
-          <Desc>We enjoy creating delightful, human-centered digital experiences.</Desc>
+          <Desc>I enjoy creating delightful, human-centered digital experiences.</Desc>
           <Button>Learn More</Button>
           </Left>
           <Right>

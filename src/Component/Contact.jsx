@@ -23,7 +23,8 @@ const Left = styled.div`
   
   @media only screen and (max-width: 768px){
     justify-content: center;
-    }
+    padding: 20px;
+  }
  `;
 
 const Title = styled.h1`
