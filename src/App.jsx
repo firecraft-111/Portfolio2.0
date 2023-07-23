@@ -5,6 +5,7 @@ import Works from "./Component/Works"
 import Contact from "./Component/Contact"
 
 const Container = styled.div`
+  padding: 7px;
   height: 100vh;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;

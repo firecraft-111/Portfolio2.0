@@ -68,6 +68,7 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
+  size: 20vh;
   color: #da4ea2;
 `;
 
@@ -104,7 +105,7 @@ const Right  = styled.div`
 `;
 
 const Img = styled.img`
- width: 650px;
+ width: 730px;
  height:600px;
  object-fit: contain;
  position: absolute;
@@ -155,7 +156,7 @@ const Hero= () => {
             />
             </Sphere>
           </Canvas>
-            <Img src="./img/mac.png"/>
+            <Img src="./img/mac3.png"/>
           </Right>
           </Container>
         </Section>

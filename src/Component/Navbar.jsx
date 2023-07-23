@@ -29,13 +29,15 @@ const Links = styled.div`
 
 `;
 const Logo = styled.img`
-  height: 50px;
+  padding-left: 5px;
+  padding-top: 5px;
+  height: 75px;
 `;
 const List = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 30px;
   list-style: none ;
-  padding-top: 15px;
+  padding-top: 30px;
 
   @media only screen and (max-width: 768px){
     display: none;
