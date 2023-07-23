@@ -1,5 +1,8 @@
 import react from 'react'
 import styled from 'styled-components'
+import { OrbitControls} from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import Cube from './Cube'
  
 const Section = styled.div`
   height: 100vh;
@@ -19,10 +22,18 @@ const Container = styled.div`
 
 const Left = styled.div`
  flex: 1;
+
+ @media only screen and (max-width: 768px){
+    display: none;
+  }
 `;
 
 const Title = styled.h1`
  font: 74px; 
+
+ @media only screen and (max-width: 768px){
+   font-size: 60px;
+  }
 `;
 
 const Right  = styled.div`
@@ -31,6 +42,11 @@ const Right  = styled.div`
  flex-direction: column;
  justify-content: center;
  gap: 20px;
+
+ @media only screen and (max-width: 768px){
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const WhatWeDO = styled.div`
@@ -50,7 +66,13 @@ const Subtitle = styled.h2`
 
 const Desc = styled.p`
   font: 24px;
-  color: lightgray;
+  color: #e098d2;
+
+  @media only screen and (max-width: 768px){
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+  }
 `;
 
 const Button = styled.button`
@@ -70,7 +92,12 @@ const Who= () => {
         <Section>
         <Container>
           <Left>
-            {/* 3d model */} 
+          <Canvas camera={{fov:25,position:[5,5,5]}}>
+            <OrbitControls enableZoom={false} autoRotate/>
+            <ambientLight intensity={1}/>
+            <directionalLight position={[3,2,1]}/>
+            <Cube/>
+          </Canvas>
           </Left>
           <Right>
           <Title>Think outside the square space</Title>
@@ -78,7 +105,7 @@ const Who= () => {
              <Line src="./img/line.png"/>
              <Subtitle>What We Are</Subtitle>
           </WhatWeDO>
-          <Desc>A creative group of designers with passion for the arts. 
+          <Desc>a creative group of designers with passion for the arts. 
           </Desc>
           <Button>See our works</Button>
           </Right>
