@@ -105,7 +105,7 @@ const Who= () => {
              <Line src="./img/line.png"/>
              <Subtitle>What I Am</Subtitle>
           </WhatWeDO>
-          <Desc>a creative designer and programmer. 
+          <Desc>Skilled in front-end and back-end technologies, I love crafting elegant solutions and creating seamless user experiences. Explore my portfolio to see how I'm making a positive impact through technology. 
           </Desc>
           <Button>See my works</Button>
           </Right>

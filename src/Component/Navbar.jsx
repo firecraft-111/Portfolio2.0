@@ -80,7 +80,7 @@ const Navbar = () => {
           </List>
         </Links>
         <Icons>
-            <Icon src="./img/search.png"></Icon>
+            {/* <Icon src="./img/search.png"></Icon> */}
             <Button>Hire Now</Button>
         </Icons>
          </Container>

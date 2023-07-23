@@ -7,9 +7,8 @@ import { useState } from 'react'
 
 
 const data=[
-  "Web Design",
-  "Development",
-  "MachineLearning",
+  "Netflix Clone",
+  "Coronavirus Live Tracker",
 ]; 
 
 const Section = styled.div`
@@ -34,10 +33,12 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  padding-left: 50px;
 
   @media only screen and (max-width: 768px){
     padding: 20px;
     justify-content: center;
+    padding-left: 0px;
   }
   `;
 

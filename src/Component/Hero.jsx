@@ -38,10 +38,12 @@ const Left = styled.div`
  flex-direction: column;
  justify-content: center;
  gap: 20px;
+ padding-left: 50px;
 
  @media only screen and (max-width: 768px){
     flex:1;
     align-items: center;
+    padding-left: 0px;
   }
 `;
 
@@ -102,7 +104,7 @@ const Right  = styled.div`
 `;
 
 const Img = styled.img`
- width: 800px;
+ width: 650px;
  height:600px;
  object-fit: contain;
  position: absolute;
@@ -135,9 +137,9 @@ const Hero= () => {
             <Title>Think. Make.  Solve.</Title>
             <WhatWeDO>
              <Line src="./img/line.png"/>
-             <Subtitle>What I Do</Subtitle>
+             <Subtitle>Hi!! I am Sumit.</Subtitle>
           </WhatWeDO>
-          <Desc>I enjoy creating delightful, human-centered digital experiences.</Desc>
+          <Desc>3rd-year engineering student passionate about Programming and Web development.</Desc>
           <Button>Learn More</Button>
           </Left>
           <Right>
@@ -153,7 +155,7 @@ const Hero= () => {
             />
             </Sphere>
           </Canvas>
-            <Img src="./img/moon.png"/>
+            <Img src="./img/mac.png"/>
           </Right>
           </Container>
         </Section>
