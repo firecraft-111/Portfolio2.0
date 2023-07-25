@@ -69,21 +69,31 @@ const Button = styled.button`
 
  
 const Navbar = () => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Section>
     <Container>
         <Links>
         <Logo src="./img/heySumit.png"/>
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Studio</ListItem>
-            <ListItem>Works</ListItem>
-            <ListItem>Contact</ListItem>
+            <ListItem onClick={() => scrollToSection('heroSection')}>Home</ListItem>
+            <ListItem onClick={() => scrollToSection('whoSection')}>Studio</ListItem>
+            <ListItem onClick={() => scrollToSection('worksSection')}>Works</ListItem>
+            <ListItem onClick={() => scrollToSection('contactSection')}>Contact</ListItem>
           </List>
         </Links>
         <Icons>
             {/* <Icon src="./img/search.png"></Icon> */}
-            <Button>Hire Now</Button>
+            {/* <Button>
+              Hire Now
+            </Button> */}
         </Icons>
          </Container>
     </Section>

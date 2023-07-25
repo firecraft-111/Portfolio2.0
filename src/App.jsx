@@ -4,6 +4,7 @@ import Who from "./Component/Who"
 import Works from "./Component/Works"
 import Contact from "./Component/Contact"
 
+
 const Container = styled.div`
   padding: 7px;
   height: 100vh;
@@ -23,7 +24,7 @@ const Container = styled.div`
 
 
 function App() {
-
+  
   return (
     <Container>
       <Hero/>

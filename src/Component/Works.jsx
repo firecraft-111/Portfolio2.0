@@ -95,7 +95,7 @@ const Right   = styled.div`
 const Works= () => {
   const [work,setWork]=useState("");
   return (
-    <Section>
+    <Section id="worksSection">
       <Container>
         <Left>
           <List>
