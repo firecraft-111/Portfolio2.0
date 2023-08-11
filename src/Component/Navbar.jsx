@@ -1,5 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import { useState } from 'react';
+
 
 const Section = styled.div`
   display: flex;
@@ -76,6 +78,18 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const [fix, setFix ] = useState(false)
+
+  function setFixed(){
+    if(window.scrollY>=3902){
+      setFix(true)
+    } else {
+      setFix(false)
+    }
+  }
+
+  window.addEventListener("scroll",setFixed)
 
   return (
     <Section>
