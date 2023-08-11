@@ -88,7 +88,15 @@ const Button = styled.button`
 
 
 const Who= () => {
-    return (
+  
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
         <Section id="whoSection">
         <Container>
           <Left>
@@ -107,7 +115,7 @@ const Who= () => {
           </WhatWeDO>
           <Desc>Skilled in front-end and back-end technologies, I love crafting elegant solutions and creating seamless user experiences. Explore my portfolio to see how I'm making a positive impact through technology. 
           </Desc>
-          <Button>See my works</Button>
+          <Button onClick={()=>scrollToSection('worksSection')}>See my works</Button>
           </Right>
           </Container>
         </Section>

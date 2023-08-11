@@ -1,4 +1,4 @@
- import react from 'react'
+import react from 'react'
 import styled from 'styled-components'
 import Navbar from './Navbar'
 import { Canvas } from '@react-three/fiber';
@@ -130,6 +130,14 @@ const Img = styled.img`
 `;
 
 const Hero= () => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
     return (
         <Section id="heroSection">
         <Navbar />
@@ -141,7 +149,7 @@ const Hero= () => {
              <Subtitle>Hi!! I am Sumit.</Subtitle>
           </WhatWeDO>
           <Desc>3rd-year engineering student passionate about Programming and Web development.</Desc>
-          <Button>Learn More</Button>
+          <Button onClick={()=>scrollToSection('whoSection')}>Learn More</Button>
           </Left>
           <Right>
           <Canvas camera={{fov:25,position:[5,5,5]}}>
