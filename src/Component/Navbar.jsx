@@ -1,7 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useState } from 'react';
-
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import './Navi.css'
 
 const Section = styled.div`
   display: flex;
@@ -31,9 +30,9 @@ const Links = styled.div`
 
 `;
 const Logo = styled.img`
-  padding-left: 5px;
+  padding-left: 30px;
   padding-top: 5px;
-  height: 75px;
+  height: 65px;
 `;
 const List = styled.ul`
   display: flex;
@@ -72,6 +71,19 @@ const Button = styled.button`
  
 const Navbar = () => {
 
+  const[show, handleShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll",()=>{
+      if(window.scrollY > 100){
+        handleShow(true);
+      } else handleShow(false);
+    });
+    return ()=>{
+      window.removeEventListener("scroll",null);
+    };
+  },[]);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -79,20 +91,9 @@ const Navbar = () => {
     }
   };
 
-  const [fix, setFix ] = useState(false)
-
-  function setFixed(){
-    if(window.scrollY>=3902){
-      setFix(true)
-    } else {
-      setFix(false)
-    }
-  }
-
-  window.addEventListener("scroll",setFixed)
-
   return (
     <Section>
+        <div className={`nav ${show && "nav__black"}`}>
     <Container>
         <Links>
         <Logo src="./img/heySumit.png"/>
@@ -110,6 +111,7 @@ const Navbar = () => {
             </Button> */}
         </Icons>
          </Container>
+         </div>
     </Section>
   )
 }
