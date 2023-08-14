@@ -33,7 +33,12 @@ const Logo = styled.img`
   padding-left: 30px;
   padding-top: 5px;
   height: 65px;
+
+  @media only screen and (max-width: 768px){
+   align-self: center;
+  }
 `;
+
 const List = styled.ul`
   display: flex;
   gap: 30px;
@@ -59,13 +64,15 @@ const Icon = styled.img`
 `;
 
 const Button = styled.button`
-  width: 100px;
+  width: 110px;
   padding: 10px;
   background-color: #da4ea2;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: medium;
+  font-weight: 500;
 `;
 
  
@@ -90,6 +97,9 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const opps=()=>{
+    window.open("https://drive.google.com/file/d/19D0wV4F0IyE7gX2UmOBetUWgWhv4jMaf/view?usp=drive_link")
+  }
 
   return (
     <Section>
@@ -106,9 +116,11 @@ const Navbar = () => {
         </Links>
         <Icons>
             {/* <Icon src="./img/search.png"></Icon> */}
-            {/* <Button>
-              Hire Now
-            </Button> */}
+            
+
+            <Button class="Resume" onClick={()=> opps()}>
+             My Resume 
+            </Button>
         </Icons>
          </Container>
          </div>
